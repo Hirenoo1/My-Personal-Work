@@ -1,0 +1,408 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* nav styles */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: rgb(5, 5, 116);
+  padding-left: 10%;
+  height: 80px;
+}
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.hamburger .line:hover {
+  background-color: cadetblue;
+}
+
+.nav__link {
+  position: fixed;
+  font-size: xx-large;
+  width: 94%;
+  top: 5rem;
+  left: 18px;
+  background-color: lightblue;
+  -webkit-transform: translate(-5%, -10%);
+}
+
+.nav__link a {
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+  color: white;
+  transition: 1s;
+}
+
+a.effect-underline:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+.nav__link a:hover {
+  color: cadetblue;
+  border-radius: 30px;
+
+}
+
+.hide {
+  display: none;
+}
+
+
+  /* =================section 2====================== */
+   .main
+   {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    color: antiquewhite;
+   }
+   .circle
+   {
+    /* background: slategrey; */
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border: 4px solid lightgray;
+    border-radius: 50%;
+    left: 45%;
+    top: 15%;
+    
+   }
+
+   .img {
+    height: 206px;
+    width: 195px;
+    position: absolute;
+    border-radius: 50%;
+    left: 45.2%;
+    top: 13.5%;
+}
+.main .text {
+    position: absolute;
+    left: 43%;
+    top: 46%;
+    font-weight: bold;
+    font-size: 3rem;
+    text-decoration: underline;
+    text-decoration-color: cadetblue;
+}
+
+.main .text1 {
+    font-weight: bold;
+    padding-left: 29%;
+    padding-right: 25%;
+    padding-top: 10%;
+    font-size: 19px;
+}
+.main .text2 p {
+    line-height: 25px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+    padding-top: 2%;
+}
+
+/* ================icons=============== */
+ ul {
+  margin: 0;
+  padding: 0;
+  width: 0%;
+  display: flex;
+  position: relative;
+  /* margin-left: 20%; */
+  margin-right: 20%;
+  margin-top: 8%;
+  transform: translate(-50%, -50%);
+}
+
+ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+ul li a {
+  position: relative; 
+  display: block;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 63px;
+  background: #333;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: .5s;
+}
+
+ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffee10;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+ul li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+ul li a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+button {
+    font-size: 13px;
+    padding: 0.3em 1em;
+    margin-left: 25%;
+    margin-top: 1%;
+    background-color: #000;
+    border: 3px solid yellow;
+    border-radius: 2em;
+    color: #fff;
+    font-weight: bolder;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+    box-shadow: -5px 5px 0px 0px rgb(177, 177, 23);
+}
+  
+  button:hover {
+    transform: translate(5px, -5px);
+  }
+
+  /* ====================navbar responsive=================== */
+  @media screen and (min-width: 770px) 
+  {
+    .nav__link {
+      display: block;
+      position: static;
+      width: auto;
+      margin-right: 20px;
+      background: none;
+    }
+  
+    .nav__link a {
+      display: inline-block;
+      padding: 15px 20px;
+    }
+  
+    .hamburger {
+      display: none;
+      color: white;
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width: 480px)
+  {
+    .logo
+    {
+      height: 50px;
+    }
+    .circle
+    {
+      top: 9%;
+      left: 30%;
+    }
+    .img
+    {
+      top: 7.7%;
+      left: 30.6%;
+    }
+    .main .text
+    {
+      left: 33%;
+      top: 40%;
+      font-size: 2rem;
+    }
+      .main .text1 
+      {
+        font-weight: bold;
+        padding-left: 29%;
+        padding-right: 25%;
+        padding-top: 65%;
+        font-size: 15px;
+      }
+
+      .main .text2 p {
+        line-height: 25px;
+        padding-left: 15%;
+        padding-right: 15%;
+        text-align: center;
+        padding-top: 2%;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    button {
+      font-size: 13px;
+      padding: 0.3em 1em;
+      margin-left: 38%;
+      margin-top: 10%;
+      background-color: black;
+      border: 3px solid yellow;
+      border-radius: 2em;
+      color: #fff;
+      font-weight: bolder;
+      transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+      box-shadow: -5px 5px 0px 0px rgb(177, 177, 23);
+  }
+
+  .icons{
+    margin-top: 10%;
+  }
+  }
+
+/* ==========================tablet and ipad screen============== */
+
+@media screen  and (min-width: 481px) and (max-width: 768px) {
+  .circle
+  {
+    left: 38%;
+  }
+  .img{
+    left: 38.2%;
+  }
+  .main .text
+  {
+    left: 36.6%;
+    font-size: 2.5rem;
+    top: 46%;
+  }
+  .main .text1
+  {
+    padding-top: 47.2%;
+  }
+  button
+  {
+    margin-left: 43%;
+      margin-top: 3%;
+  }
+}
+
+/* ==========================small screen and laptop screen==================== */
+  
+@media screen  and (min-width: 769px) and (max-width: 1024px)
+{
+  .logo{
+    height: 65px;
+  }
+  .main .text
+  {
+    left: 41.6%;
+    top: 45%;
+  }
+  .main .text1
+  {
+    padding-top: 35.5%;
+  }
+  button
+  {
+    margin-left: 47%;
+    margin-top: 4%;
+  } 
+}
+
+/* ===================Desktop and large screen======================= */
+
+@media screen  and (min-width: 1025px) and (max-width: 1200px)
+{
+  .main .text
+  {
+    left: 42.5%;
+    top: 46%;
+  }
+
+  .main .text1
+  {
+    padding-top: 32%;
+  }
+
+  button
+  {
+    margin-left: 48%;
+    margin-top: 3%;
+  } 
+}
+
+/* ==============Extra Large Screen and TV======================= */
+
+@media screen and (min-width: 1201px )
+{
+  .main .text
+  {
+    left: 42.5%;
+    top: 46%;
+  }
+
+  .main .text1
+  {
+    padding-top: 32%;
+  }
+
+  button
+  {
+    margin-left: 46%;
+    margin-top: 3%;
+  }
+}

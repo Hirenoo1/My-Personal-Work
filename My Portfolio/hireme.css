@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: black;
+  color: antiquewhite;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* nav styles */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: rgb(5, 5, 116);
+  padding-left: 10%;
+  height: 80px;
+}
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.hamburger .line:hover {
+  background-color: cadetblue;
+}
+
+.nav__link {
+  position: fixed;
+  font-size: xx-large;
+  width: 94%;
+  top: 5rem;
+  left: 18px;
+  background-color: lightblue;
+  -webkit-transform: translate(-5%, -10%);
+}
+
+.nav__link a {
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+  color: white;
+  transition: 1s;
+}
+
+a.effect-underline:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+.nav__link a:hover {
+  color: cadetblue;
+  border-radius: 30px;
+
+}
+
+.hide {
+  display: none;
+}
+  
+
+  .contact
+  {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-left: 45%;
+    margin-top: 8%;
+  }
+  #inp{
+    height: 40px;
+    width: 50%;
+    font-weight: bold;
+    margin: 20px;
+    background: black;
+    color: aliceblue;
+    border-radius: 10%;
+    border: 4px solid lightgreen;
+    font-size: large;
+  }
+  .inp
+  {
+    margin-top: 5%;
+  }
+
+  .button {
+    appearance: none;
+    background-color:antiquewhite;
+    border-radius: 40em;
+    border-style: none;
+    box-shadow: #ADCFFF 0 -19px 6px inset;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    quotes: auto;
+    /* text-align: center; */
+    /* text-decoration: none; */
+    transition: all .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+  
+  .button:hover {
+    background-color: lightgreen;
+    box-shadow: lightpink 0 -10px 8px inset;
+    transform: scale(1.125);
+  }
+  
+  .button:active {
+    transform: scale(1.025);
+  }
+  .name{
+    width: 50%;
+    height: 80px;
+    font-weight: bold;
+    font-size: x-large; 
+    margin-left: 10%;
+  }
+  .email
+  {
+    width: 50%;
+    height: 80px;
+    font-weight: bold;
+    font-size: x-large;
+    /* margin-left: 15%; */
+  }
+  .num
+  {
+    width: 50%;
+    height: 80px;
+    font-weight: bold;
+    font-size: x-large; 
+    margin-left: 10%;
+  }
+  .subject
+  {
+    width: 50%;
+    height: 80px;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  
+  @media (min-width: 768px) {
+    .button {
+      font-size: 1.5rem;
+      padding: .75rem 2rem;
+    }
+  }
+  /* ====================navbar responsive=================== */
+@media screen and (min-width: 770px) 
+{
+  .nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    margin-right: 20px;
+    background: none;
+  }
+
+  .nav__link a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+    color: white;
+  }
+}
+
+
+/* ====================Mobile Screen========================== */
+@media screen and (max-width: 480px)
+{
+  .logo
+  {
+    height: 50px;
+  }
+  .inp{
+    flex-wrap: wrap;
+  }
+  .contact
+  {
+    margin-left: 27.5%;
+  }
+  .name
+  {
+    width: 100%;
+  }
+  .email
+  {
+    width: 100%;
+  }
+}
+
+
+
+/* ======================Tablet and Ipad screen================================= */
+
+@media screen  and (min-width: 481px) and (max-width: 768px)
+{
+  
+}
+
+
+/* ==========================small screen and laptop screen==================== */
+  
+@media screen  and (min-width: 769px) and (max-width: 1024px)
+{
+
+}
+
+
+/* ===================Desktop and large screen======================= */
+
+@media screen  and (min-width: 1025px) and (max-width: 1200px)
+{
+
+}
+
+
+/* ==============Extra Large Screen and TV======================= */
+
+@media screen and (min-width: 1201px )
+{
+
+}

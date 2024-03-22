@@ -1,0 +1,383 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* nav styles */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: rgb(5, 5, 116);
+  padding-left: 10%;
+  height: 80px;
+}
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.hamburger .line:hover {
+  background-color: cadetblue;
+}
+
+.nav__link {
+  position: fixed;
+  font-size: xx-large;
+  width: 94%;
+  top: 5rem;
+  left: 18px;
+  background-color: currentColor;
+  -webkit-transform: translate(-5%, -10%);
+}
+
+.nav__link a {
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+  color: white;
+  transition: 1s;
+}
+
+a.effect-underline:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+.nav__link a:hover {
+  color: cadetblue;
+  border-radius: 30px;
+
+}
+
+.hide {
+  display: none;
+}
+
+/* ====================navbar responsive=================== */
+
+/* ========================section 2====================== */
+
+.detail {
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.detail h1 {
+  font-size: 50px;
+  color: burlywood;
+  margin-bottom: 20px;
+}
+
+span {
+  color: greenyellow;
+}
+
+.detail p {
+  color: antiquewhite;
+  line-height: 25px;
+  font-size: 20px;
+  /* margin-left: 14%; */
+}
+
+.detail a {
+  background: rgb(153, 196, 210);
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  display: inline-block;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: 1s;
+}
+
+.detail a:hover {
+  background: seagreen;
+  bottom: 20px;
+  transform: translateX(10%);
+}
+
+.images {
+  width: 45%;
+  height: 80%;
+  left: 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+.images img {
+  height: 100%;
+  /* width: 50%; */
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape {
+  bottom: 40px;
+}
+
+.images .me {
+  left: 43%;
+}
+
+.images:hover .me {
+  left: 45%;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    margin-right: 20px;
+    background: none;
+  }
+
+  .nav__link a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+    color: white;
+  }
+}
+/* =======================mobile screen========================== */
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  .logo{
+    height: 50px;
+  }
+  .detail h1 {
+    font-size: 35px;
+    color: burlywood;
+    margin-bottom: 20px;
+    margin-left: 8%;
+}
+
+.detail p {
+  font-size: 13px;
+  color: antiquewhite;
+  /* font-size: small; */
+  line-height: 15px;
+  margin-bottom: 0px;
+  margin-left: 13%;
+}
+.detail a {
+  background: rgb(153, 196, 210);
+  padding: 5px 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 10px;
+  color: black;
+  display: inline-block;
+  margin: 16px 0;
+  border-radius: 5px;
+  transition: 1s;
+  margin-left: 33%;
+}
+
+.images {
+  width: 34%;
+  height: 50%;
+  left: 34%;
+  position: absolute;
+  bottom: 50px;
+}
+.images img {
+  height: 80%;
+  /* width: 50%; */
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+}
+.images .me {
+  left: 32%;
+}
+
+}
+/* ==========================tablet and ipad screen============== */
+
+@media screen and (min-width: 481px) and (max-width:768px)
+{
+  .logo
+  {
+    height: 55px;
+  }
+  .detail h1 {
+    font-size: 40px;
+    color: burlywood;
+    margin-top: 100px;
+    margin-left: 4%;
+  }
+  .detail p {
+    color: antiquewhite;
+    line-height: 20px;
+    font-size: 15px;
+    margin-left: 10%;
+}
+.detail a {
+  background: rgb(153, 196, 210);
+  padding: 6px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  display: inline-block;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: 1s;
+  margin-left: 29%;
+  font-size: 15px;
+  margin-top: 5%;
+}
+  .images {
+    width: 0%;
+    height: 50%;
+    left: 50%;
+    position: absolute;
+    /* bottom: -27px; */
+    top: 60%;
+  }
+}
+
+
+
+/* ==========================small screen and laptop screen==================== */
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+  
+  .nav__link 
+  {
+    font-size: 10px;
+    width: 94%;
+    margin-top: 3rem;
+    margin-left: 18px;
+  }
+  .logo{
+    height: 50px;
+  }
+  .detail{
+    margin-top: 30%;
+  }
+  .detail h1 {
+    font-size: 35px;
+    color: burlywood;
+    margin-bottom: 20px;
+  }
+  .detail p {
+    color: antiquewhite;
+    line-height: 18px;
+    font-size: 13px;
+}
+.detail a {
+  background: rgb(153, 196, 210);
+  padding: 6px 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  display: inline-block;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: 1s;
+  font-size: 10px;
+}
+.images {
+  width: 43%;
+  height: 55%;
+  left: 50%;
+  position: absolute;
+  bottom: 0;
+  top: 30%;
+}
+
+}
+
+
+/* ===================Desktop and large screen======================= */
+
+@media screen and (min-width: 1025px) and (max-width:1200px) {
+
+  .detail {
+    margin-left: 10%;
+    margin-top: 25%;
+}
+
+  .images {
+    width: 45%;
+    height: 67%;
+    left: 50%;
+    position: absolute;
+    bottom: 0;
+}
+}
+
+/* ==============Extra Large Screen and TV======================= */
+
+@media screen and (min-width: 1201px ) {
+
+  .detail {
+    margin-left: 10%;
+    margin-top: 22%;
+}
+  .images {
+    width: 42%;
+    height: 70%;
+    left: 50%;
+    position: absolute;
+    bottom: 0;
+}
+}
